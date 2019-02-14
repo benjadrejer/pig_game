@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="animate.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        
+        <title>Pig Game</title>
+    </head>
+
+    <body>
+        <div class="wrapper clearfix">
+            <div class="player-0-panel active">
+                <div class="player-name" id="name-0">Player 1</div>
+                <div class="player-score" id="score-0">0</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-0">0</div>
+                </div>
+            </div>
+            
+            <div class="player-1-panel">
+                <div class="player-name" id="name-1">Player 2</div>
+                <div class="player-score" id="score-1">0</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-1">0</div>
+                </div>
+            </div>
+            
+            <div class="mute-box">
+            <label for="mute">Mute sound </label>
+            <input type="checkbox" class="mute-sound" id="mute">
+            </div>
+            
+            <div class="winning-box">
+            <label for="winning">Select winning score </label>
+            <input type="number" class="winning-score" id="winning" value="100">
+            </div>
+            
+            <div class="tooltip">
+                Instructions
+                <span class="tooltiptext">The goal is to be the first player to reach the winning score or above.<br/>
+                Winning score is 100 by default. You can change this and hit "New Game" to update the winning score.<br/>
+                2 dice will be rolled on every roll. The combined total will be added to the players current score. Once the player chooses to Hold, the current score will be added to the total score and it is the next players turn.<br/>
+                If one of the dice rolls a 1, the player loses his current score and it is the next players turn.<br/>
+                If the left die rolls a 6 two turns in a row, the player will lose his current AND total score, and it is the next players turn.</span>
+            </div>
+            
+            <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
+            <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
+            <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+            
+            <img src="dice-1.png" alt="Dice" class="dice animated" style="display: box;" id="dice-0">
+            <img src="dice-1.png" alt="Dice" class="dice animated" style="display: box;" id="dice-1">
+        </div>
+        
+        <script src="howler.min.js"></script>
+        <script src="appNEW.js"></script>
+    </body>
+</html>
